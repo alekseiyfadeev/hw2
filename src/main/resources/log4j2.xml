@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+    <Appenders>
+        <Console name="HW2TestConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{[%d{HH:mm:ss.SSS}] | %p | %t | %c{1} | %m%n}"/>
+        </Console>
+        <File name="HW2TestFileAppender" fileName="HW2Test.log">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="HW2TestConsoleAppender"/>
+            <AppenderRef ref="HW2TestFileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
